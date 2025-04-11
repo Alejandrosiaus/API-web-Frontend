@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Incidentes - API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lista de Incidentes</h1>
+
+  <div>
+    <form id="incident-form">
+      <input type="text" id="reporter" placeholder="Reportado por" required>
+      <input type="text" id="description" placeholder="Descripción" required>
+      <button type="submit">Crear incidente</button>
+    </form>
+  </div>
+
+  <table border="1" id="incident-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Reporter</th>
+        <th>Descripción</th>
+        <th>Status</th>
+        <th>Fecha</th>
+        <th>Actualizar estado</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody id="incident-body">
+      <!-- Aquí se cargan los incidentes -->
+    </tbody>
+  </table>
+
+  <script src="main.js"></script>
+</body>
+</html>

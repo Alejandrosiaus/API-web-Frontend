@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS  
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)  
 
 # Configuración de la base de datos
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:P101104e@localhost:5432/incidentes_db'
@@ -20,7 +22,7 @@ class Incident(db.Model):
 
 
 # Crear nuevo incidente
-@app.route('/incidents', methods=['POST'])
+@app.route('/incidents', methods=['POST'])  
 def create_incident():
     data = request.json
     reporter = data.get('reporter')
